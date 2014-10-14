@@ -15,8 +15,8 @@
         "doctrine/orm": ">=2.2.3,<2.4-dev",
         "friendsofsymfony/rest-bundle": "@dev",
         "jms/serializer-bundle": "@dev",
-        "sulu/sulu": "dev-master",
-        "sulu/admin-bundle": "dev-master"
+        "sulu/sulu": "0.8.*",
+        "sulu/admin-bundle": "0.8.*"
     },
     "require-dev": {
         "symfony/symfony": "2.5.*",
@@ -24,7 +24,7 @@
         "symfony/monolog-bundle": "2.4.*",
         "doctrine/doctrine-bundle": "1.2.*",
         "phpunit/phpunit": "4.1.*",
-        "sulu/test-bundle": "dev-master"
+        "sulu/test-bundle": "0.8.*"
     },
     "autoload": {
         "psr-0": {
