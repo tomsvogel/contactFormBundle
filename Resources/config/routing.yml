@@ -1,0 +1,7 @@
+arkulpa_contact_form_security_token:
+   pattern:  /contactForm/securityToken
+   defaults: { _controller: ArkulpaContactFormBundle:ContactForm:securityToken }
+
+arkulpa_contact_form_send:
+   pattern:  /contactForm/send
+   defaults: { _controller: ArkulpaContactFormBundle:ContactForm:send }

@@ -1,0 +1,4 @@
+# arkulpa_contact_form_homepage:
+#    pattern:  /admin/api/something
+#    defaults: { _controller: ArkulpaContactFormBundle:Default:index }
+
