@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="main">
+
+    <b>Name: </b> {{ name }} <br/>
+    <b>Email: </b> {{ email }} <br/>
+    {% if phone is defined %}
+        <b>Phone: </b> {{ phone }} <br/>
+    {% endif %}
+    <b>Subject: </b> {{ subject }} <br/>
+    <b>Message: </b> </br>
+    <p>{{ message }}</p>
+
+
+</div>
+</body>
+</html>

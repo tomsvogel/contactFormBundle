@@ -1,7 +1,5 @@
 <?php
-/**
- * Service for form validation
- */
+
 
 namespace Arkulpa\Bundle\ContactFormBundle\Service;
 

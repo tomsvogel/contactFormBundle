@@ -1,8 +1,9 @@
 <?php
-namespace Arkulpa\Bundle\DeskBundle\Form;
+namespace Arkulpa\Bundle\ContactFormBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
@@ -32,8 +33,26 @@ class ContactFormType extends AbstractType
             array(
                 'constraints' => array(
                     new NotBlank(array('message' => 'email-empty-error')),
-                    new NotBlank(array('message' => 'email-empty-error')),
+                    new Email(array('message' => 'email-not-valid')),
 
+                ),
+            )
+        );
+        $builder->add(
+            'subject',
+            null,
+            array(
+                'constraints' => array(
+                    new NotBlank(array('message' => 'subject-empty-error')),
+                ),
+            )
+        );
+        $builder->add(
+            'message',
+            null,
+            array(
+                'constraints' => array(
+                    new NotBlank(array('message' => 'message-empty-error')),
                 ),
             )
         );

@@ -30,7 +30,14 @@ class ArkulpaContactFormExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        foreach ($config['forms'] as $form) {
+            $options = $form['options'];
+            $container->setParameter(
+                'arkulpa_contact_form_' . $options['id'],
+                $options
+            );
+        }
+        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.xml');
     }
 }
