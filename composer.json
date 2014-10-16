@@ -1,30 +1,20 @@
 {
     "name": "arkulpa/contactform-bundle",
-    "type": "sulu-bundle",
-    "description": "TODO",
+    "type": "library",
+    "description": "ajax contact form Bundle",
     "license": "MIT",
-    "keywords": ["TODO"],
+    "keywords": ["ajax", "contact form", "Symfony Validation"],
     "authors": [
         {
-            "name": "Sulu Community",
-            "homepage": "https://github.com/massiveart/ArkulpaContactFormBundle/contributors"
+            "name": "tomsvogel",
+            "homepage": "http://www.arkulpa.at"
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "doctrine/orm": ">=2.2.3,<2.4-dev",
-        "friendsofsymfony/rest-bundle": "@dev",
-        "jms/serializer-bundle": "@dev",
-        "sulu/sulu": "0.8.*",
-        "sulu/admin-bundle": "0.8.*"
+        "php": ">=5.4"
     },
     "require-dev": {
-        "symfony/symfony": "2.5.*",
-        "sensio/framework-extra-bundle": "~3.0",
-        "symfony/monolog-bundle": "2.4.*",
-        "doctrine/doctrine-bundle": "1.2.*",
-        "phpunit/phpunit": "4.1.*",
-        "sulu/test-bundle": "0.8.*"
+        "symfony/symfony": "2.5.*"
     },
     "autoload": {
         "psr-0": {

@@ -1,7 +1,0 @@
-arkulpa_contact_form:
-    resource: "@ArkulpaContactFormBundle/Resources/config/routing.yml"
-    prefix: /arkulpa_contact_form
-
-arkulpa_contact_form:
-    resource: "@ArkulpaContactFormBundle/Resources/config/routing_api.yml"
-    prefix: /arkulpa_contact_form
