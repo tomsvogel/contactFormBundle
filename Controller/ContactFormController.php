@@ -6,6 +6,7 @@ namespace Arkulpa\Bundle\ContactFormBundle\Controller;
 use Arkulpa\Bundle\ContactFormBundle\Form\ContactFormType;
 use Arkulpa\Bundle\ContactFormBundle\Form\ContactFormTypeWithPhone;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -93,13 +94,13 @@ class ContactFormController extends Controller
     protected function generateSuccesResponse($data = null)
     {
         $returnValue = array('status' => 'success', 'data' => $data);
-        return new Response(json_encode($returnValue));
+        return new JsonResponse($returnValue);
     }
 
     protected function  generateValidationErrorResponse($validationErrors)
     {
         $returnValue = array('status' => 'fail', 'data' => array('errors' => $validationErrors));
-        return new Response(json_encode($returnValue), 400);
+        return new JsonResponse($returnValue, 400);
     }
 
     protected function generateLogicErrorResponse($e)
@@ -110,7 +111,7 @@ class ContactFormController extends Controller
             $translatedError = $this->get('translator.default')->trans($e);
         }
         $returnValue = array('status' => 'error', 'data' => $translatedError);
-        return new Response(json_encode($returnValue), 500);
+        return new JsonResponse($returnValue, 500);
     }
 
 }
