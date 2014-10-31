@@ -105,9 +105,9 @@ class ContactFormController extends Controller
     protected function generateLogicErrorResponse($e)
     {
         if ($e instanceof \Exception) {
-            $translatedError = $this->get('translator .default')->trans($e->getMessage());
+            $translatedError = $this->get('translator.default')->trans($e->getMessage());
         } else {
-            $translatedError = $this->get('translator .default')->trans($e);
+            $translatedError = $this->get('translator.default')->trans($e);
         }
         $returnValue = array('status' => 'error', 'data' => $translatedError);
         return new Response(json_encode($returnValue), 500);
