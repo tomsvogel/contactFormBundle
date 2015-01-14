@@ -3,6 +3,7 @@ namespace Arkulpa\Bundle\ContactFormBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
@@ -63,11 +64,12 @@ class ContactFormType extends AbstractType
         return 'arkulpa_contact_form_type';
     }
 
-
-    public function getDefaultOptions(array $options)
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        return array(
-            'csrf_protection' => false
+        $resolver->setDefaults(
+            array(
+                'csrf_protection' => false,
+            )
         );
     }
 }
