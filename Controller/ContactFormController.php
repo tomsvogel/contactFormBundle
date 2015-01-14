@@ -26,7 +26,7 @@ class ContactFormController extends Controller
 
             $formOptions = $this->getFormOptions($formId);
             $formType = $this->getFormType($formOptions['type']);
-            $form = $this->get('form.factory')->create($formType);
+            $form = $this->get('form.factory')->create($formType, null, array('csrf_protection' => false));
 
             //map request data to names for the array
             $r = $request->request->all();
