@@ -62,4 +62,12 @@ class ContactFormType extends AbstractType
     {
         return 'arkulpa_contact_form_type';
     }
+
+
+    public function getDefaultOptions(array $options)
+    {
+        return array(
+            'csrf_protection' => false
+        );
+    }
 }

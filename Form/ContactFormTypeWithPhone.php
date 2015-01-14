@@ -33,4 +33,11 @@ class ContactFormTypeWithPhone extends AbstractType
     {
         return 'arkulpa_contact_form_type_with_phone';
     }
+
+    public function getDefaultOptions(array $options)
+    {
+        return array(
+            'csrf_protection' => false
+        );
+    }
 }
