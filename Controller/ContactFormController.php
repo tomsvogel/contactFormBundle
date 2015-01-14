@@ -50,7 +50,7 @@ class ContactFormController extends Controller
             $message = \Swift_Message::newInstance()
                 ->setFrom(
                     array(
-                        $r['email'] => $r['name']
+                        'versand@arkulp.at' => 'Kontaktformular Webseite'
                     )
                 )
                 ->setSubject($this->get('translator')->trans('contact-form-subject') . " - " . $r['subject'])
